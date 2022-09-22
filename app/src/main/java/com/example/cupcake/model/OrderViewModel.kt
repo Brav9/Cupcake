@@ -21,7 +21,7 @@ class OrderViewModel : ViewModel() {
     fun setQuantity(numberCupcakes: Int) {
         _quantity.value = numberCupcakes
     }
-    a
+
     fun setFlavor(desiredFlavor: String) {
         _flavor.value = desiredFlavor
     }
