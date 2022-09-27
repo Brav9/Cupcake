@@ -20,6 +20,8 @@ class OrderViewModel : ViewModel() {
     private val _price = MutableLiveData<Double>(0.0)
     val price: LiveData<Double> = _price
 
+    val dateOptions = getPickupOptions()
+
     fun setQuantity(numberCupcakes: Int) {
         _quantity.value = numberCupcakes
     }
@@ -46,4 +48,5 @@ class OrderViewModel : ViewModel() {
         }
         return options
     }
+
 }
