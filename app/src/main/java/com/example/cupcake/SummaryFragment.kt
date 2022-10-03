@@ -75,6 +75,10 @@ class SummaryFragment : Fragment() {
             .setType("text/plain")
             .putExtra(Intent.EXTRA_SUBJECT, getString(R.string.new_cupcake_order))
             .putExtra(Intent.EXTRA_TEXT, orderSummary)
+
+        if (activity?.packageManager?.resolveActivity(intent, 0) != null) {
+            startActivity(intent)
+        }
     }
 
     /**
